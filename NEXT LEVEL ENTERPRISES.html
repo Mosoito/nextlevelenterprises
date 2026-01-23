@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)file:///C:/Users/pc/Desktop/NEXT%20LEVEL/next.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>NEXT LEVEL ENTERPRISES</title>
+  <meta name="description" content="NEXT LEVEL ENTERPRISES — bold creative solutions for brands. Home · About · Contact">
+  <style>
+    :root{
+      --bg1: #0f0c29; /* deep blue */
+      --bg2: #302b63; /* dark purple */
+      --accent1: #00e5ff; /* electric blue */
+      --accent2: #ff3ec3; /* neon pink */
+      --accent3: #9b59ff; /* lavender */
+      --glass: rgba(255,255,255,0.06);
+      --glass-strong: rgba(255,255,255,0.09);
+      --text: #e9f0ff;
+      --muted: rgba(233,240,255,0.7);
+      --radius: 16px;
+      --shadow: 0 10px 30px rgba(2,6,23,0.6);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+
+    /* Page layout */
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(135deg,var(--bg1),var(--bg2));color:var(--text);-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+
+    header{
+      position:fixed;top:18px;left:50%;transform:translateX(-50%);width:92%;max-width:1200px;z-index:60;display:flex;align-items:center;justify-content:space-between;padding:12px;border-radius:14px;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));backdrop-filter: blur(8px);box-shadow:var(--shadow);
+    }
+
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{
+      width:48px;height:48px;border-radius:10px;background:conic-gradient(from 200deg at 50% 50%, var(--accent2), var(--accent1), var(--accent3));display:flex;align-items:center;justify-content:center;font-weight:700;color:#071028;box-shadow:0 6px 18px rgba(0,0,0,0.45);
+    }
+    .brand h1{font-size:18px;margin:0;letter-spacing:0.6px}
+    .brand p{font-size:11px;margin:0;opacity:0.85}
+
+    nav{display:flex;gap:12px;align-items:center}
+    .nav-link{padding:8px 14px;border-radius:12px;font-weight:600;color:var(--muted);transition:all .26s ease}
+    .nav-link:hover{color:var(--text);transform:translateY(-4px);box-shadow:0 6px 18px rgba(155,89,255,0.12)}
+
+    .cta{padding:10px 16px;border-radius:12px;background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#041024;font-weight:800;letter-spacing:0.6px;box-shadow:0 10px 30px rgba(0,0,0,0.5);border:none;cursor:pointer}
+    .cta:active{transform:translateY(1px)}
+
+    main{padding-top:120px;}
+    .hero{max-width:1200px;margin:40px auto;padding:48px;border-radius:24px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));box-shadow:var(--shadow);display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center}
+
+    .hero-left h2{font-size:48px;margin:0 0 12px 0;line-height:1.02;letter-spacing:-1px;background:linear-gradient(90deg,var(--accent1),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero-left p{color:var(--muted);font-size:16px;margin:0 0 20px}
+
+    .hero-actions{display:flex;gap:12px}
+    .btn-outline{padding:12px 18px;border-radius:12px;border:1px solid rgba(255,255,255,0.06);background:transparent;font-weight:700;color:var(--muted);cursor:pointer}
+    .glow-card{padding:18px;border-radius:16px;background:linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));box-shadow:0 12px 40px rgba(0,0,0,0.6);}
+
+    /* Neon badge & features */
+    .neon-badge{display:inline-flex;align-items:center;gap:10px;padding:8px 12px;border-radius:999px;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);}
+    .neon-dot{width:12px;height:12px;border-radius:50%;box-shadow:0 0 12px 4px rgba(0,229,255,0.12),0 0 30px rgba(255,62,195,0.04);background:linear-gradient(180deg,var(--accent1),var(--accent2))}
+
+    /* Contact card */
+    .contact-card{display:flex;flex-direction:column;gap:12px;padding:22px;border-radius:16px;background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));}
+    .contact-card h3{margin:0}
+    .contact-card small{color:var(--muted)}
+    .input,textarea{width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text);outline:none}
+    textarea{min-height:120px;resize:vertical}
+    .send{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent2),var(--accent3));font-weight:700;color:#041024;border:none;cursor:pointer}
+
+    /* About section */
+    .about{max-width:1200px;margin:28px auto;padding:36px;border-radius:18px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));box-shadow:0 8px 30px rgba(2,6,23,0.5);display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .skills{display:flex;flex-direction:column;gap:12px}
+    .skill{padding:12px;border-radius:12px;background:linear-gradient(90deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));border:1px solid rgba(255,255,255,0.02)}
+
+    footer{max-width:1200px;margin:28px auto;padding:18px;border-radius:12px;background:linear-gradient(90deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));display:flex;justify-content:space-between;align-items:center;color:var(--muted)}
+
+    /* small screens */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      header{left:12px;right:12px;transform:none;width:auto}
+      nav{display:none}
+    }
+
+    /* subtle animations */
+    .floating{
+      animation: float 6s ease-in-out infinite;
+    }
+    @keyframes float{
+      0%{transform:translateY(0)}
+      50%{transform:translateY(-12px)}
+      100%{transform:translateY(0)}
+    }
+
+    /* smooth scroll behavior and focus states */
+    html{scroll-behavior:smooth}
+    .nav-link:focus{outline:2px dashed rgba(255,255,255,0.08);outline-offset:4px}
+
+    /* subtle particle background */
+    .particles{position:fixed;inset:0;z-index:0;pointer-events:none;background-image:radial-gradient(circle at 20% 20%, rgba(0,229,255,0.04) 0px, transparent 40px),radial-gradient(circle at 80% 80%, rgba(255,62,195,0.03) 0px, transparent 60px);mix-blend-mode:screen;}
+
+  </style>
+</head>
+<body>
+  <div class="particles" aria-hidden="true"></div>
+
+  <header>
+    <div class="brand">
+      <img src="./NEXT LEVEL ENTERPRISES_files/logo.png" height="100" width="100" alt="our logo">
+     
+      
+      <div>
+        <h1>NEXT LEVEL ENTERPRISES</h1>
+        <marquee behavior="scroll" direction="left">Welcome to Next Level Enterprises!</marquee>
+        <p>Delivering digital due solutions</p>
+      </div>
+    </div>
+
+    <nav aria-label="Primary">
+      <a class="nav-link" href="file:///C:/Users/pc/Desktop/NEXT%20LEVEL/next.html#home">Home</a>
+      <a class="nav-link" href="file:///C:/Users/pc/Desktop/NEXT%20LEVEL/next.html#about">About</a>
+      <a class="nav-link" href="file:///C:/Users/pc/Desktop/NEXT%20LEVEL/next.html#contact">Contact Us</a>
+    </nav>
+
+    <button class="cta" onclick="document.getElementById(&#39;contact&#39;).scrollIntoView({behavior:&#39;smooth&#39;})">Didital Platform</button>
+  </header>
+
+  <main>
+    <section id="home" class="hero" role="region" aria-label="Home">
+      <div class="hero-left">
+        <div class="neon-badge"><div class="neon-dot"></div><div style="font-weight:700">Here,</div></div>
+        <h2>We offer <span style="opacity:0.98">NEXT LEVEL</span></h2>
+        <p>Strategic digital experiences that spark and drive conversions. We blend art and systems to create memorable web journeys.</p>
+
+        <div class="hero-actions">
+          <button class="cta" onclick="document.getElementById(&#39;contact&#39;).scrollIntoView({behavior:&#39;smooth&#39;})">Reach to us</button>
+          <button class="btn-outline" onclick="document.getElementById(&#39;about&#39;).scrollIntoView({behavior:&#39;smooth&#39;})">Learn more</button>
+        </div>
+
+        <div style="margin-top:26px;display:flex;gap:12px;align-items:center">
+          <div class="glow-card floating" style="flex: 1 1 0%; transition: transform 0.6s cubic-bezier(0.2, 0.9, 0.2, 1), box-shadow 0.4s; animation: auto ease 0s 1 normal none running none;">
+            <strong>Graphic designs</strong>
+            <div style="color:var(--muted);font-size:15px;margin-top:2px">Posters · Brochures · logos · Business cards · Wedding cards · Banners</div>
+          </div>
+
+          <div class="glow-card floating" style="flex: 1 1 0%; transform-origin: center center; animation: auto ease 0s 1 normal none running none; transition: transform 0.6s cubic-bezier(0.2, 0.9, 0.2, 1), box-shadow 0.4s;">
+            <strong>Digital Desigs</strong>
+            <div style="color:var(--muted);font-size:15px;margin-top:2px">Websites designs</div>
+          </div>
+
+          <div class="glow-card floating" style="flex: 1 1 0%; transition: transform 0.6s cubic-bezier(0.2, 0.9, 0.2, 1), box-shadow 0.4s; animation: auto ease 0s 1 normal none running none;">
+            <strong>Government services</strong>
+            <div style="color:var(--muted);font-size:15px;margin-top:2px">Good condact · SHA · KRA · NSSF · Lisence Renewal ·</div>
+          </div>
+
+          <div class="glow-card floating" style="flex: 1 1 0%; transition: transform 0.6s cubic-bezier(0.2, 0.9, 0.2, 1), box-shadow 0.4s; animation: auto ease 0s 1 normal none running none;">
+            <strong>Computer Packages</strong>
+            <div style="color:var(--muted);font-size:15px;margin-top:2px">MS Word · MS Excel · MS Publisher · MS PowerPoint</div>
+          </div>
+
+        </div>
+      </div>
+
+      <aside class="contact-card" aria-label="Quick Contact">
+        <h3>Quick contact</h3>
+        <small>Leave a message</small>
+        <form onsubmit="event.preventDefault(); alert(&#39;Thanks! We\&#39;ll be in touch.&#39;); this.reset();">
+          <input class="input" type="text" name="name" placeholder="Your name" required="">
+          <input class="input" type="email" name="email" placeholder="Email address" required="">
+          <button class="send" type="submit">Send message</button>
+        </form>
+
+        <div style="margin-top:10px;color:var(--muted);font-size:13px">Or email: <a href="mailto:nextlevelenterprices@gmail.com">nextlevelenterprices@gmail.com</a></div>
+      </aside>
+    </section>
+
+    <section id="about" class="about" role="region" aria-label="About">
+      <div>
+        <h2 style="margin-top:0">About</h2>
+        <p style="color:var(--muted)">NEXT LEVEL ENTERPRISES is a leading provider of digital services, specializing in graphic design, web development, and computer packeges. Our team of experts is dedicated to delivering high-quality services that meet your unique needs and exceed your expectations.</p>
+        <div style="margin-top:14px;display:flex;gap:12px;flex-wrap:wrap">
+          <div class="skill">Packages &amp; Skills</div>
+          <div class="skill">Print &amp; Packaging</div>
+          <div class="skill">Web &amp; Graphis</div>
+          
+        </div>
+      </div>
+
+      <div>
+        <h3 style="margin-top:0">Why choose us</h3>
+        <ul style="color:var(--muted);line-height:1.8">
+          <li>Design-first approach with measurable outcomes</li>
+          <li>Transparent process and milestone delivery</li>
+          <li>Fast iterations — polished final assets</li>
+        </ul>
+
+        <div style="margin-top:18px">
+          <button class="btn-outline" onclick="window.open(&#39;#&#39;, &#39;_blank&#39;)">View portfolio</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="max-width:1200px;margin:28px auto;padding:24px;border-radius:16px;" role="region" aria-label="Contact">
+      <div style="display:grid;grid-template-columns:1fr 360px;gap:18px;align-items:start">
+        <div style="background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));padding:22px;border-radius:16px;box-shadow:var(--shadow)">
+          <h2 style="margin-top:0">Contact Us</h2>
+          <p style="color:var(--muted)">Want to oder your service or something else? Drop the details below and we'll get back to you.</p>
+
+          <form onsubmit="event.preventDefault(); alert(&#39;Thanks — message sent.&#39;); this.reset();">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+              <input class="input" name="name" placeholder="Name" required="">
+              <input class="input" name="order" placeholder="Your order" required="">
+            </div>
+            <input class="input" type="email" name="email" placeholder="Email" required="" style="margin-top:10px">
+            <textarea name="message" placeholder="Tell us about your order" required="" style="margin-top:10px"></textarea>
+            <div style="margin-top:12px;display:flex;gap:10px;align-items:center">
+              <button class="send" type="submit">Send message</button>
+              <div style="color:var(--muted);font-size:13px"> Or call: +254729 138 046<ul>+254 799 181 446</ul></div>
+            </div>
+          </form>
+        </div>
+
+        <aside style="padding:22px;border-radius:16px;background:linear-gradient(90deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));box-shadow:var(--shadow)">
+          <h3 style="margin-top:0">We deliver your order!!</h3>
+          <div style="color:var(--muted);margin-top:8px">Nairobi, Kenya</div>
+          <div style="margin-top:12px;color:var(--muted);font-size:13px">Follow</div>
+          <div style="display:flex;gap:10px;margin-top:8px">
+            <a class="nav-link" href="file:///C:/Users/pc/Desktop/NEXT%20LEVEL/next.html#NEXTLEVELCOMPUTERSKILLS">Youtube</a>
+            <a class="nav-link" href="file:///C:/Users/pc/Desktop/NEXT%20LEVEL/next.html#">Instagram</a>
+            <a class="nav-link" href="file:///C:/Users/pc/Desktop/NEXT%20LEVEL/next.html#">LinkedIn</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <strong>NEXT LEVEL ENTERPRISES</strong> — Built with ❤️</div>
+      <div style="color:var(--muted)">All rights reserved · <a href="file:///C:/Users/pc/Desktop/NEXT%20LEVEL/next.html#about">About</a> · <a href="file:///C:/Users/pc/Desktop/NEXT%20LEVEL/next.html#contact">Contact</a></div>
+    </footer>
+
+  </main>
+
+  <script>
+    // small UI niceties: add focus-visible and small reveal animation
+    document.querySelectorAll('.glow-card').forEach((el,i)=>{
+      el.style.transition='transform .6s cubic-bezier(.2,.9,.2,1), box-shadow .4s';
+      el.addEventListener('mouseenter',()=>el.style.transform='translateY(-10px)');
+      el.addEventListener('mouseleave',()=>el.style.transform='translateY(0)');
+    });
+
+    // reduce-motion preference respect
+    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+      document.querySelectorAll('.floating').forEach(e=>e.style.animation='none');
+    }
+  </script>
+
+
+</body></html>
