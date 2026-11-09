@@ -1,256 +1,398 @@
 <!DOCTYPE html>
-<!-- saved from url=(0050)file:///C:/Users/pc/Desktop/NEXT%20LEVEL/next.html -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>NEXT LEVEL ENTERPRISES</title>
-  <meta name="description" content="NEXT LEVEL ENTERPRISES — bold creative solutions for brands. Home · About · Contact">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NEXT LEVEL ENTERPRISES | Your Next Level Service Provider</title>
+  <meta name="description" content="NEXT LEVEL ENTERPRISES provides graphic design, website design, computer services, government e-services and computer training in Kenya. Your Next Level Service Provider.">
+  <meta name="keywords" content="Next Level Enterprises, graphic design, website design, computer services, cyber services, computer packages, Kenya">
+  <meta name="author" content="NEXT LEVEL ENTERPRISES">
+  <meta name="theme-color" content="#11152f">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="NEXT LEVEL ENTERPRISES">
+  <meta property="og:description" content="Your Next Level Service Provider. Creative digital solutions and professional services.">
+  <meta property="og:url" content="https://nextlevelenterprices.github.io/nextlevel/">
+  <link rel="canonical" href="https://nextlevelenterprices.github.io/nextlevel/">
+  <link rel="icon" href="assets/logo.png" type="image/png">
   <style>
-    :root{
-      --bg1: #0f0c29; /* deep blue */
-      --bg2: #302b63; /* dark purple */
-      --accent1: #00e5ff; /* electric blue */
-      --accent2: #ff3ec3; /* neon pink */
-      --accent3: #9b59ff; /* lavender */
-      --glass: rgba(255,255,255,0.06);
-      --glass-strong: rgba(255,255,255,0.09);
-      --text: #e9f0ff;
-      --muted: rgba(233,240,255,0.7);
-      --radius: 16px;
-      --shadow: 0 10px 30px rgba(2,6,23,0.6);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    :root {
+      --navy:#10142d; --navy2:#191d42; --purple:#5542a8;
+      --cyan:#00d5e8; --pink:#e84ca8; --ink:#182039;
+      --muted:#667085; --paper:#f6f8fc; --white:#fff;
+      --line:#e7eaf2; --radius:20px; --shadow:0 18px 50px rgba(16,20,45,.12);
+      --max:1160px;
     }
-
-    /* Page layout */
     *{box-sizing:border-box}
-    html,body{height:100%;margin:0;background:linear-gradient(135deg,var(--bg1),var(--bg2));color:var(--text);-webkit-font-smoothing:antialiased}
+    html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65}
     a{color:inherit;text-decoration:none}
-
-    header{
-      position:fixed;top:18px;left:50%;transform:translateX(-50%);width:92%;max-width:1200px;z-index:60;display:flex;align-items:center;justify-content:space-between;padding:12px;border-radius:14px;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));backdrop-filter: blur(8px);box-shadow:var(--shadow);
+    img{max-width:100%;display:block}
+    button,input,textarea,select{font:inherit}
+    .container{width:min(92%,var(--max));margin-inline:auto}
+    .topbar{background:#0b1028;color:#dce4ff;font-size:.88rem;padding:8px 0}
+    .topbar-inner{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(20,30,65,.08)}
+    .nav-wrap{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+    .brand{display:flex;align-items:center;gap:12px;min-width:0}
+    .brand img{width:54px;height:54px;object-fit:contain;border-radius:12px}
+    .brand-mark{width:52px;height:52px;display:grid;place-items:center;border-radius:14px;background:linear-gradient(135deg,var(--cyan),var(--pink));color:#10142d;font-weight:900;font-size:1.1rem}
+    .brand-name{font-weight:900;letter-spacing:.04em;color:var(--navy);font-size:1rem;line-height:1.2}
+    .brand-tag{font-size:.75rem;color:var(--muted)}
+    .nav-links{display:flex;align-items:center;gap:22px}
+    .nav-links a{font-size:.93rem;font-weight:700;color:#46506a}
+    .nav-links a:hover{color:var(--purple)}
+    .menu-toggle{display:none;border:1px solid var(--line);background:#fff;border-radius:12px;padding:9px 12px;color:var(--navy);font-size:1.3rem}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 19px;border-radius:12px;font-weight:800;border:0;cursor:pointer;transition:.2s}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:linear-gradient(100deg,var(--cyan),#73e8ee);color:#07152c;box-shadow:0 10px 24px rgba(0,213,232,.2)}
+    .btn-dark{background:var(--navy);color:#fff}
+    .btn-outline{border:1px solid rgba(255,255,255,.35);color:#fff;background:transparent}
+    .hero{position:relative;overflow:hidden;background:linear-gradient(120deg,#10142d 0%,#25265b 58%,#543b91 100%);color:#fff;padding:86px 0 78px}
+    .hero:before,.hero:after{content:"";position:absolute;border-radius:50%;filter:blur(2px);pointer-events:none}
+    .hero:before{width:430px;height:430px;right:-100px;top:-180px;background:radial-gradient(circle,rgba(0,213,232,.25),transparent 68%)}
+    .hero:after{width:380px;height:380px;left:35%;bottom:-280px;background:radial-gradient(circle,rgba(232,76,168,.25),transparent 68%)}
+    .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.25fr .75fr;gap:55px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;color:#a9f5fb;font-weight:800;text-transform:uppercase;letter-spacing:.13em;font-size:.76rem}
+    .eyebrow:before{content:"";width:25px;height:2px;background:var(--cyan)}
+    h1{font-size:clamp(2.5rem,5.5vw,4.7rem);line-height:1.05;letter-spacing:-.045em;margin:18px 0}
+    .gradient-text{background:linear-gradient(90deg,#8cf5fb,#ff9bd3);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero-copy{color:#d7dcf4;font-size:1.1rem;max-width:650px;margin:0 0 26px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .hero-panel{padding:28px;border:1px solid rgba(255,255,255,.15);border-radius:24px;background:rgba(255,255,255,.08);backdrop-filter:blur(12px);box-shadow:0 24px 60px rgba(0,0,0,.18)}
+    .hero-panel h2{margin:0 0 8px;font-size:1.25rem}
+    .hero-panel p{color:#d7dcf4;margin:0 0 18px;font-size:.94rem}
+    .mini-services{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .mini-service{padding:13px;border-radius:13px;background:rgba(255,255,255,.08);font-size:.88rem;font-weight:750}
+    .mini-service span{display:block;font-size:1.25rem;margin-bottom:4px}
+    section{padding:78px 0}
+    .section-head{max-width:700px;margin-bottom:34px}
+    .kicker{color:#6552b4;text-transform:uppercase;font-size:.76rem;letter-spacing:.14em;font-weight:900}
+    h2.section-title{font-size:clamp(2rem,4vw,2.8rem);line-height:1.15;color:var(--navy);margin:8px 0 12px;letter-spacing:-.035em}
+    .section-intro{color:var(--muted);margin:0}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+    .about-card{background:#fff;padding:30px;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .about-card p{color:var(--muted)}
+    .value-list{display:grid;gap:13px;margin-top:20px}
+    .value-item{display:flex;gap:12px;align-items:flex-start}
+    .check{width:27px;height:27px;flex:0 0 27px;display:grid;place-items:center;background:#e2fbfd;color:#087d8a;border-radius:50%;font-weight:900}
+    .services{background:#fff}
+    .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .service-card{padding:25px;border:1px solid var(--line);border-radius:18px;background:#fff;transition:.22s;box-shadow:0 8px 24px rgba(16,20,45,.04)}
+    .service-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:#d5d1f0}
+    .service-icon{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,#e2fbfd,#fbe5f3);font-size:1.4rem;margin-bottom:16px}
+    .service-card h3{margin:0 0 8px;color:var(--navy);font-size:1.12rem}
+    .service-card p{color:var(--muted);font-size:.93rem;margin:0 0 15px}
+    .text-link{font-weight:850;color:#5947a5;font-size:.9rem}
+    .portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .work-card{overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:18px}
+    .work-art{min-height:190px;display:grid;place-items:center;text-align:center;padding:20px;color:#fff;font-weight:900;font-size:1.35rem;letter-spacing:.02em}
+    .art-one{background:linear-gradient(135deg,#18234b,#6c4eb4)}
+    .art-two{background:linear-gradient(135deg,#0d7788,#17254c)}
+    .art-three{background:linear-gradient(135deg,#a93f81,#38265f)}
+    .art-four{background:linear-gradient(135deg,#273d63,#11a9b9)}
+    .art-five{background:linear-gradient(135deg,#543c91,#e05a9d)}
+    .art-six{background:linear-gradient(135deg,#20294b,#7584bb)}
+    .work-info{padding:17px 19px}
+    .work-info h3{margin:0 0 4px;font-size:1rem;color:var(--navy)}
+    .work-info p{margin:0;color:var(--muted);font-size:.88rem}
+    .portfolio-note{margin-top:18px;color:var(--muted);font-size:.9rem}
+    .why{background:linear-gradient(120deg,#111630,#28275e);color:#fff}
+    .why .section-title{color:#fff!important}
+    .why .section-intro{color:#cbd2eb}
+    .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .why-item{padding:22px;border:1px solid rgba(255,255,255,.13);border-radius:16px;background:rgba(255,255,255,.06)}
+    .why-item h3{margin:0 0 7px}
+    .why-item p{color:#cbd2eb;margin:0;font-size:.92rem}
+    .testimonials{background:#fff}
+    .testimonial-placeholder{padding:30px;border:1px dashed #b9bfd0;border-radius:18px;background:#fafbff;color:var(--muted)}
+    .contact-grid{display:grid;grid-template-columns:1fr .78fr;gap:24px;align-items:start}
+    .contact-form,.contact-info{background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px;box-shadow:var(--shadow)}
+    .contact-form h3,.contact-info h3{margin:0 0 8px;color:var(--navy)}
+    .form-intro{color:var(--muted);margin:0 0 20px;font-size:.93rem}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+    .field{display:flex;flex-direction:column;gap:6px;margin-bottom:13px}
+    .field label{font-size:.86rem;font-weight:800;color:#35405c}
+    .field input,.field textarea,.field select{width:100%;padding:12px 13px;border:1px solid #dce1ec;border-radius:11px;background:#fbfcff;color:var(--ink);outline:none}
+    .field input:focus,.field textarea:focus,.field select:focus{border-color:#7868c5;box-shadow:0 0 0 3px rgba(120,104,197,.12)}
+    .field textarea{min-height:125px;resize:vertical}
+    .contact-lines{display:grid;gap:16px;margin:20px 0}
+    .contact-line{display:flex;gap:12px;align-items:flex-start}
+    .contact-line b{display:block;color:var(--navy)}
+    .contact-line span{color:var(--muted);font-size:.92rem}
+    .notice{font-size:.82rem;color:var(--muted);margin:12px 0 0}
+    .site-footer{background:#0b1028;color:#d7def4;padding:38px 0 20px}
+    .footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:30px;padding-bottom:28px}
+    .site-footer h3{color:#fff;margin:0 0 12px}
+    .site-footer p,.site-footer a{color:#b9c2df;font-size:.91rem}
+    .footer-links{display:grid;gap:8px}
+    .copyright{border-top:1px solid rgba(255,255,255,.12);padding-top:17px;color:#aab4d3;font-size:.84rem;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+    .whatsapp-float{position:fixed;right:20px;bottom:20px;z-index:90;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#20c86a;color:#fff;font-size:1.65rem;box-shadow:0 12px 28px rgba(0,0,0,.25)}
+    .whatsapp-float:hover{transform:translateY(-3px)}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    @media(max-width:900px){
+      .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+      .hero-grid{gap:30px}
+      .service-grid,.portfolio-grid{grid-template-columns:repeat(2,1fr)}
+      .nav-links{display:none;position:absolute;top:82px;left:0;right:0;background:#fff;padding:18px 4%;border-bottom:1px solid var(--line);box-shadow:0 15px 25px rgba(16,20,45,.1);flex-direction:column;align-items:stretch;gap:0}
+      .nav-links.open{display:flex}
+      .nav-links a{padding:12px 4px}
+      .menu-toggle{display:block}
+      .nav-cta{display:none}
     }
-
-    .brand{display:flex;gap:12px;align-items:center}
-    .logo{
-      width:48px;height:48px;border-radius:10px;background:conic-gradient(from 200deg at 50% 50%, var(--accent2), var(--accent1), var(--accent3));display:flex;align-items:center;justify-content:center;font-weight:700;color:#071028;box-shadow:0 6px 18px rgba(0,0,0,0.45);
+    @media(max-width:600px){
+      .topbar-inner{justify-content:center;text-align:center}
+      .brand-name{font-size:.85rem}
+      .brand-tag{font-size:.68rem}
+      .brand img,.brand-mark{width:44px;height:44px}
+      .hero{padding:58px 0}
+      section{padding:58px 0}
+      .service-grid,.portfolio-grid,.why-grid,.footer-grid,.form-grid{grid-template-columns:1fr}
+      .hero-panel{padding:20px}
+      .mini-services{grid-template-columns:1fr 1fr}
+      .contact-form,.contact-info{padding:21px}
+      .whatsapp-float{width:52px;height:52px;right:14px;bottom:14px}
     }
-    .brand h1{font-size:18px;margin:0;letter-spacing:0.6px}
-    .brand p{font-size:11px;margin:0;opacity:0.85}
-
-    nav{display:flex;gap:12px;align-items:center}
-    .nav-link{padding:8px 14px;border-radius:12px;font-weight:600;color:var(--muted);transition:all .26s ease}
-    .nav-link:hover{color:var(--text);transform:translateY(-4px);box-shadow:0 6px 18px rgba(155,89,255,0.12)}
-
-    .cta{padding:10px 16px;border-radius:12px;background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#041024;font-weight:800;letter-spacing:0.6px;box-shadow:0 10px 30px rgba(0,0,0,0.5);border:none;cursor:pointer}
-    .cta:active{transform:translateY(1px)}
-
-    main{padding-top:120px;}
-    .hero{max-width:1200px;margin:40px auto;padding:48px;border-radius:24px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));box-shadow:var(--shadow);display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center}
-
-    .hero-left h2{font-size:48px;margin:0 0 12px 0;line-height:1.02;letter-spacing:-1px;background:linear-gradient(90deg,var(--accent1),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
-    .hero-left p{color:var(--muted);font-size:16px;margin:0 0 20px}
-
-    .hero-actions{display:flex;gap:12px}
-    .btn-outline{padding:12px 18px;border-radius:12px;border:1px solid rgba(255,255,255,0.06);background:transparent;font-weight:700;color:var(--muted);cursor:pointer}
-    .glow-card{padding:18px;border-radius:16px;background:linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));box-shadow:0 12px 40px rgba(0,0,0,0.6);}
-
-    /* Neon badge & features */
-    .neon-badge{display:inline-flex;align-items:center;gap:10px;padding:8px 12px;border-radius:999px;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);}
-    .neon-dot{width:12px;height:12px;border-radius:50%;box-shadow:0 0 12px 4px rgba(0,229,255,0.12),0 0 30px rgba(255,62,195,0.04);background:linear-gradient(180deg,var(--accent1),var(--accent2))}
-
-    /* Contact card */
-    .contact-card{display:flex;flex-direction:column;gap:12px;padding:22px;border-radius:16px;background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));}
-    .contact-card h3{margin:0}
-    .contact-card small{color:var(--muted)}
-    .input,textarea{width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text);outline:none}
-    textarea{min-height:120px;resize:vertical}
-    .send{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent2),var(--accent3));font-weight:700;color:#041024;border:none;cursor:pointer}
-
-    /* About section */
-    .about{max-width:1200px;margin:28px auto;padding:36px;border-radius:18px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));box-shadow:0 8px 30px rgba(2,6,23,0.5);display:grid;grid-template-columns:1fr 1fr;gap:20px}
-    .skills{display:flex;flex-direction:column;gap:12px}
-    .skill{padding:12px;border-radius:12px;background:linear-gradient(90deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));border:1px solid rgba(255,255,255,0.02)}
-
-    footer{max-width:1200px;margin:28px auto;padding:18px;border-radius:12px;background:linear-gradient(90deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));display:flex;justify-content:space-between;align-items:center;color:var(--muted)}
-
-    /* small screens */
-    @media (max-width:900px){
-      .hero{grid-template-columns:1fr;}
-      header{left:12px;right:12px;transform:none;width:auto}
-      nav{display:none}
-    }
-
-    /* subtle animations */
-    .floating{
-      animation: float 6s ease-in-out infinite;
-    }
-    @keyframes float{
-      0%{transform:translateY(0)}
-      50%{transform:translateY(-12px)}
-      100%{transform:translateY(0)}
-    }
-
-    /* smooth scroll behavior and focus states */
-    html{scroll-behavior:smooth}
-    .nav-link:focus{outline:2px dashed rgba(255,255,255,0.08);outline-offset:4px}
-
-    /* subtle particle background */
-    .particles{position:fixed;inset:0;z-index:0;pointer-events:none;background-image:radial-gradient(circle at 20% 20%, rgba(0,229,255,0.04) 0px, transparent 40px),radial-gradient(circle at 80% 80%, rgba(255,62,195,0.03) 0px, transparent 60px);mix-blend-mode:screen;}
-
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
   </style>
 </head>
 <body>
-  <div class="particles" aria-hidden="true"></div>
-
-  <header>
-    <div class="brand">
-      <img src="./NEXT LEVEL ENTERPRISES_files/logo.png" height="100" width="100" alt="our logo">
-     
-      
-      <div>
-        <h1>NEXT LEVEL ENTERPRISES</h1>
-        <marquee behavior="scroll" direction="left">Welcome to Next Level Enterprises!</marquee>
-        <p>Delivering digital due solutions</p>
-      </div>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>Professional digital solutions in Kenya</span>
+      <span>Call: +254 729 138 046 &nbsp; | &nbsp; +254 799 181 446</span>
     </div>
+  </div>
 
-    <nav aria-label="Primary">
-      <a class="nav-link" href="file:///C:/Users/pc/Desktop/NEXT%20LEVEL/next.html#home">Home</a>
-      <a class="nav-link" href="file:///C:/Users/pc/Desktop/NEXT%20LEVEL/next.html#about">About</a>
-      <a class="nav-link" href="file:///C:/Users/pc/Desktop/NEXT%20LEVEL/next.html#contact">Contact Us</a>
-    </nav>
-
-    <button class="cta" onclick="document.getElementById(&#39;contact&#39;).scrollIntoView({behavior:&#39;smooth&#39;})">Didital Platform</button>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="Next Level Enterprises home">
+        <img src="assets/logo.png" alt="NEXT LEVEL ENTERPRISES logo" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+        <span class="brand-mark" style="display:none" aria-hidden="true">NL</span>
+        <span>
+          <span class="brand-name">NEXT LEVEL ENTERPRISES</span><br>
+          <span class="brand-tag">Your Next Level Service Provider.</span>
+        </span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primaryNav">☰</button>
+      <nav class="nav-links" id="primaryNav" aria-label="Main navigation">
+        <a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a><a href="#contact">Contact</a>
+      </nav>
+      <a class="btn btn-dark nav-cta" href="#contact">Get a Quote</a>
+    </div>
   </header>
 
   <main>
-    <section id="home" class="hero" role="region" aria-label="Home">
-      <div class="hero-left">
-        <div class="neon-badge"><div class="neon-dot"></div><div style="font-weight:700">Here,</div></div>
-        <h2>We offer <span style="opacity:0.98">NEXT LEVEL</span></h2>
-        <p>Strategic digital experiences that spark and drive conversions. We blend art and systems to create memorable web journeys.</p>
-
-        <div class="hero-actions">
-          <button class="cta" onclick="document.getElementById(&#39;contact&#39;).scrollIntoView({behavior:&#39;smooth&#39;})">Reach to us</button>
-          <button class="btn-outline" onclick="document.getElementById(&#39;about&#39;).scrollIntoView({behavior:&#39;smooth&#39;})">Learn more</button>
-        </div>
-
-        <div style="margin-top:26px;display:flex;gap:12px;align-items:center">
-          <div class="glow-card floating" style="flex: 1 1 0%; transition: transform 0.6s cubic-bezier(0.2, 0.9, 0.2, 1), box-shadow 0.4s; animation: auto ease 0s 1 normal none running none;">
-            <strong>Graphic designs</strong>
-            <div style="color:var(--muted);font-size:15px;margin-top:2px">Posters · Brochures · logos · Business cards · Wedding cards · Banners</div>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Creativity · Technology · Service</span>
+          <h1>Take your ideas to the <span class="gradient-text">NEXT LEVEL.</span></h1>
+          <p class="hero-copy">We help individuals, businesses and organisations move forward through creative design, digital solutions, computer services and practical technology support.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#services">Explore our services</a>
+            <a class="btn btn-outline" href="#contact">Talk to us</a>
           </div>
-
-          <div class="glow-card floating" style="flex: 1 1 0%; transform-origin: center center; animation: auto ease 0s 1 normal none running none; transition: transform 0.6s cubic-bezier(0.2, 0.9, 0.2, 1), box-shadow 0.4s;">
-            <strong>Digital Desigs</strong>
-            <div style="color:var(--muted);font-size:15px;margin-top:2px">Websites designs</div>
-          </div>
-
-          <div class="glow-card floating" style="flex: 1 1 0%; transition: transform 0.6s cubic-bezier(0.2, 0.9, 0.2, 1), box-shadow 0.4s; animation: auto ease 0s 1 normal none running none;">
-            <strong>Government services</strong>
-            <div style="color:var(--muted);font-size:15px;margin-top:2px">Good condact · SHA · KRA · NSSF · Lisence Renewal ·</div>
-          </div>
-
-          <div class="glow-card floating" style="flex: 1 1 0%; transition: transform 0.6s cubic-bezier(0.2, 0.9, 0.2, 1), box-shadow 0.4s; animation: auto ease 0s 1 normal none running none;">
-            <strong>Computer Packages</strong>
-            <div style="color:var(--muted);font-size:15px;margin-top:2px">MS Word · MS Excel · MS Publisher · MS PowerPoint</div>
-          </div>
-
         </div>
-      </div>
-
-      <aside class="contact-card" aria-label="Quick Contact">
-        <h3>Quick contact</h3>
-        <small>Leave a message</small>
-        <form onsubmit="event.preventDefault(); alert(&#39;Thanks! We\&#39;ll be in touch.&#39;); this.reset();">
-          <input class="input" type="text" name="name" placeholder="Your name" required="">
-          <input class="input" type="email" name="email" placeholder="Email address" required="">
-          <button class="send" type="submit">Send message</button>
-        </form>
-
-        <div style="margin-top:10px;color:var(--muted);font-size:13px">Or email: <a href="mailto:nextlevelenterprices@gmail.com">nextlevelenterprices@gmail.com</a></div>
-      </aside>
-    </section>
-
-    <section id="about" class="about" role="region" aria-label="About">
-      <div>
-        <h2 style="margin-top:0">About</h2>
-        <p style="color:var(--muted)">NEXT LEVEL ENTERPRISES is a leading provider of digital services, specializing in graphic design, web development, and computer packeges. Our team of experts is dedicated to delivering high-quality services that meet your unique needs and exceed your expectations.</p>
-        <div style="margin-top:14px;display:flex;gap:12px;flex-wrap:wrap">
-          <div class="skill">Packages &amp; Skills</div>
-          <div class="skill">Print &amp; Packaging</div>
-          <div class="skill">Web &amp; Graphis</div>
-          
-        </div>
-      </div>
-
-      <div>
-        <h3 style="margin-top:0">Why choose us</h3>
-        <ul style="color:var(--muted);line-height:1.8">
-          <li>Design-first approach with measurable outcomes</li>
-          <li>Transparent process and milestone delivery</li>
-          <li>Fast iterations — polished final assets</li>
-        </ul>
-
-        <div style="margin-top:18px">
-          <button class="btn-outline" onclick="window.open(&#39;#&#39;, &#39;_blank&#39;)">View portfolio</button>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" style="max-width:1200px;margin:28px auto;padding:24px;border-radius:16px;" role="region" aria-label="Contact">
-      <div style="display:grid;grid-template-columns:1fr 360px;gap:18px;align-items:start">
-        <div style="background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));padding:22px;border-radius:16px;box-shadow:var(--shadow)">
-          <h2 style="margin-top:0">Contact Us</h2>
-          <p style="color:var(--muted)">Want to oder your service or something else? Drop the details below and we'll get back to you.</p>
-
-          <form onsubmit="event.preventDefault(); alert(&#39;Thanks — message sent.&#39;); this.reset();">
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
-              <input class="input" name="name" placeholder="Name" required="">
-              <input class="input" name="order" placeholder="Your order" required="">
-            </div>
-            <input class="input" type="email" name="email" placeholder="Email" required="" style="margin-top:10px">
-            <textarea name="message" placeholder="Tell us about your order" required="" style="margin-top:10px"></textarea>
-            <div style="margin-top:12px;display:flex;gap:10px;align-items:center">
-              <button class="send" type="submit">Send message</button>
-              <div style="color:var(--muted);font-size:13px"> Or call: +254729 138 046<ul>+254 799 181 446</ul></div>
-            </div>
-          </form>
-        </div>
-
-        <aside style="padding:22px;border-radius:16px;background:linear-gradient(90deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));box-shadow:var(--shadow)">
-          <h3 style="margin-top:0">We deliver your order!!</h3>
-          <div style="color:var(--muted);margin-top:8px">Nairobi, Kenya</div>
-          <div style="margin-top:12px;color:var(--muted);font-size:13px">Follow</div>
-          <div style="display:flex;gap:10px;margin-top:8px">
-            <a class="nav-link" href="file:///C:/Users/pc/Desktop/NEXT%20LEVEL/next.html#NEXTLEVELCOMPUTERSKILLS">Youtube</a>
-            <a class="nav-link" href="file:///C:/Users/pc/Desktop/NEXT%20LEVEL/next.html#">Instagram</a>
-            <a class="nav-link" href="file:///C:/Users/pc/Desktop/NEXT%20LEVEL/next.html#">LinkedIn</a>
+        <aside class="hero-panel">
+          <h2>Your ideas deserve professional execution.</h2>
+          <p>From a simple document to a complete digital presence, let's make your next step count.</p>
+          <div class="mini-services">
+            <div class="mini-service"><span>✦</span>Graphic design</div>
+            <div class="mini-service"><span>⌘</span>Website design</div>
+            <div class="mini-service"><span>▣</span>Computer services</div>
+            <div class="mini-service"><span>◎</span>Digital support</div>
           </div>
         </aside>
       </div>
     </section>
 
-    <footer>
-      <div>© <strong>NEXT LEVEL ENTERPRISES</strong> — Built with ❤️</div>
-      <div style="color:var(--muted)">All rights reserved · <a href="file:///C:/Users/pc/Desktop/NEXT%20LEVEL/next.html#about">About</a> · <a href="file:///C:/Users/pc/Desktop/NEXT%20LEVEL/next.html#contact">Contact</a></div>
-    </footer>
+    <section id="about">
+      <div class="container about-grid">
+        <div>
+          <span class="kicker">Who we are</span>
+          <h2 class="section-title">Ideas, design and technology working together.</h2>
+          <p class="section-intro">NEXT LEVEL ENTERPRISES is a digital and computer services venture focused on helping customers, entrepreneurs and organisations access practical, creative and reliable solutions.</p>
+          <div class="value-list">
+            <div class="value-item"><span class="check">✓</span><div><b>Customer-focused service</b><br><span class="section-intro">We listen to your needs and work towards the outcome you want.</span></div></div>
+            <div class="value-item"><span class="check">✓</span><div><b>Creative and practical solutions</b><br><span class="section-intro">We combine creativity with useful digital skills.</span></div></div>
+            <div class="value-item"><span class="check">✓</span><div><b>Professional communication</b><br><span class="section-intro">Clear communication from enquiry to delivery.</span></div></div>
+          </div>
+        </div>
+        <div class="about-card">
+          <span class="kicker">Our commitment</span>
+          <h3 style="font-size:1.55rem;color:var(--navy);margin:8px 0">Your Next Level Service Provider.</h3>
+          <p>Our goal is to make digital services more accessible and help our customers present their ideas, businesses and work with confidence.</p>
+          <a class="btn btn-dark" href="#contact">Start an enquiry</a>
+        </div>
+      </div>
+    </section>
 
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">What we do</span>
+          <h2 class="section-title">Our Services</h2>
+          <p class="section-intro">Explore our services and contact us to discuss your requirements, timelines and pricing.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card"><div class="service-icon">🎨</div><h3>Graphic Design & Branding</h3><p>Posters, brochures, logos, business cards, wedding cards, banners and other promotional designs.</p><a class="text-link" href="#contact" data-service="Graphic Design & Branding">Enquire about this service →</a></article>
+          <article class="service-card"><div class="service-icon">💻</div><h3>Website Design</h3><p>Modern, responsive websites for individuals, businesses, churches and organisations.</p><a class="text-link" href="#contact" data-service="Website Design">Enquire about this service →</a></article>
+          <article class="service-card"><div class="service-icon">🖨️</div><h3>Computer & Cyber Services</h3><p>Computer-related services, document preparation, printing, photocopying and scanning.</p><a class="text-link" href="#contact" data-service="Computer & Cyber Services">Enquire about this service →</a></article>
+          <article class="service-card"><div class="service-icon">🪪</div><h3>Government E-Services</h3><p>Assistance with available online services such as eCitizen, KRA, SHA, NSSF and licence renewal processes.</p><a class="text-link" href="#contact" data-service="Government E-Services">Enquire about this service →</a></article>
+          <article class="service-card"><div class="service-icon">📚</div><h3>Computer Packages & Training</h3><p>Practical computer training covering MS Word, Excel, PowerPoint, Publisher and essential digital skills.</p><a class="text-link" href="#contact" data-service="Computer Packages & Training">Enquire about this service →</a></article>
+          <article class="service-card"><div class="service-icon">🌐</div><h3>Digital Support</h3><p>General digital assistance, online applications, document support and other technology-related services.</p><a class="text-link" href="#contact" data-service="Digital Support">Enquire about this service →</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Selected work</span>
+          <h2 class="section-title">Our Portfolio</h2>
+        </div>
+        <div class="portfolio-grid">
+          <article class="work-card"><div class="work-art art-one"><img src="images/brand.png"><div class="work-info"><h3>Logo & Brand Design</h3><p>Identity and branding projects</p></div></article>
+          <article class="work-card"><div class="work-art art-two"><img src="images/posters.jfif"><div class="work-info"><h3>Posters & Flyers</h3><p>Promotional and event graphics</p></div></article>
+          <article class="work-card"><div class="work-art art-three"><img src="images/event.jfif"><div class="work-info"><h3>Invitations & Cards</h3><p>Wedding and event stationery</p></div></article>
+          <article class="work-card"><div class="work-art art-four"><img src="images/web.jfif"><div class="work-info"><h3>Website Projects</h3><p>Responsive digital experiences</p></div></article>
+          <article class="work-card"><div class="work-art art-five"><img src="images/business.jfif"><div class="work-info"><h3>Business Materials</h3><p>Brochures and business cards</p></div></article>
+          <article class="work-card"><div class="work-art art-six"><img src="images/printing.jfif"><div class="work-info"><h3>Print-ready Artwork</h3><p>Designs prepared for printing</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="why">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker" style="color:#9af4fa">The Next Level difference</span>
+          <h2 class="section-title">Why Choose Us?</h2>
+          <p class="section-intro">We aim to make every interaction straightforward, professional and focused on your needs.</p>
+        </div>
+        <div class="why-grid">
+          <div class="why-item"><h3>01. Customer Focus</h3><p>Your requirements guide the service we provide.</p></div>
+          <div class="why-item"><h3>02. Creative Thinking</h3><p>We bring fresh ideas and thoughtful design to your projects.</p></div>
+          <div class="why-item"><h3>03. Practical Support</h3><p>We help you navigate everyday digital and computer tasks.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Customer experience</span>
+          <h2 class="section-title">Client Testimonials</h2>
+          <p class="section-intro">We value every customer and welcome feedback that helps us improve.</p>
+        </div>
+        <div class="testimonial-placeholder">
+          <a class="text-link" href="#contact">Share your feedback →</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Let's work together</span>
+          <h2 class="section-title">Contact NEXT LEVEL ENTERPRISES</h2>
+          <p class="section-intro">Tell us what you need. Submit the form to prepare an enquiry in WhatsApp, or contact us directly by phone or email.</p>
+        </div>
+        <div class="contact-grid">
+          <form class="contact-form" id="contactForm">
+            <h3>Send an enquiry</h3>
+            <p class="form-intro">Fields marked * are required. Your message will open in WhatsApp for you to review and send.</p>
+            <div class="form-grid">
+              <div class="field"><label for="name">Your name *</label><input id="name" name="name" autocomplete="name" required placeholder="Enter your name"></div>
+              <div class="field"><label for="phone">Phone number *</label><input id="phone" name="phone" autocomplete="tel" required placeholder="+254..."></div>
+            </div>
+            <div class="field"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com"></div>
+            <div class="field"><label for="service">Service required *</label>
+              <select id="service" name="service" required>
+                <option value="">Select a service</option>
+                <option>Graphic Design & Branding</option><option>Website Design</option><option>Computer & Cyber Services</option>
+                <option>Government E-Services</option><option>Computer Packages & Training</option><option>Digital Support</option><option>Other enquiry</option>
+              </select>
+            </div>
+            <div class="field"><label for="message">Tell us about your request *</label><textarea id="message" name="message" required placeholder="Describe the service you need, your deadline or any important details..."></textarea></div>
+            <button class="btn btn-primary" type="submit">Continue to WhatsApp →</button>
+            <p class="notice" id="formStatus" role="status">WhatsApp will open with your enquiry. You must press Send in WhatsApp to deliver it.</p>
+          </form>
+          <aside class="contact-info">
+            <h3>Get in touch</h3>
+            <p class="form-intro">We look forward to hearing from you.</p>
+            <div class="contact-lines">
+              <div class="contact-line"><span>☎️</span><div><b>Call us</b><span><a href="tel:+254729138046">+254 729 138 046</a><br><a href="tel:+254799181446">+254 799 181 446</a></span></div></div>
+              <div class="contact-line"><span>✉️</span><div><b>Email</b><span><a href="mailto:nextlevelenterprices@gmail.com">nextlevelenterprices@gmail.com</a></span></div></div>
+              <div class="contact-line"><span>📍</span><div><b>Location</b><span>Nairobi, Kenya (update this if your business location changes)</span></div></div>
+            </div>
+            <a class="btn btn-dark" href="https://wa.me/254729138046?text=Hello%20NEXT%20LEVEL%20ENTERPRISES%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener">Chat on WhatsApp</a>
+            <p class="notice">Please do not send passwords, PINs or sensitive identity information through this website.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
   </main>
 
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><h3>NEXT LEVEL ENTERPRISES</h3><p>Your Next Level Service Provider. Creative digital solutions and professional computer services.</p></div>
+        <div><h3>Quick Links</h3><div class="footer-links"><a href="#about">About Us</a><a href="#services">Our Services</a><a href="#portfolio">Portfolio</a><a href="#contact">Contact Us</a></div></div>
+        <div><h3>Contact</h3><div class="footer-links"><a href="tel:+254729138046">+254 729 138 046</a><a href="tel:+254799181446">+254 799 181 446</a><a href="mailto:nextlevelenterprices@gmail.com">nextlevelenterprices@gmail.com</a></div></div>
+      </div>
+      <div class="copyright"><span>© <span id="year"></span> NEXT LEVEL ENTERPRISES. All rights reserved.</span><span>Designed to take your ideas to the next level.</span></div>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/254729138046?text=Hello%20NEXT%20LEVEL%20ENTERPRISES" target="_blank" rel="noopener" aria-label="Chat with Next Level Enterprises on WhatsApp">☏</a>
+
   <script>
-    // small UI niceties: add focus-visible and small reveal animation
-    document.querySelectorAll('.glow-card').forEach((el,i)=>{
-      el.style.transition='transform .6s cubic-bezier(.2,.9,.2,1), box-shadow .4s';
-      el.addEventListener('mouseenter',()=>el.style.transform='translateY(-10px)');
-      el.addEventListener('mouseleave',()=>el.style.transform='translateY(0)');
+    // Mobile navigation
+    const menuToggle = document.getElementById('menuToggle');
+    const primaryNav = document.getElementById('primaryNav');
+    menuToggle.addEventListener('click', () => {
+      const isOpen = primaryNav.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+      menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+      menuToggle.textContent = isOpen ? '×' : '☰';
+    });
+    primaryNav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      primaryNav.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'Open navigation menu');
+      menuToggle.textContent = '☰';
+    }));
+
+    // Preselect service when a service card's enquiry link is clicked
+    document.querySelectorAll('[data-service]').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('service').value = link.dataset.service;
+      });
     });
 
-    // reduce-motion preference respect
-    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-      document.querySelectorAll('.floating').forEach(e=>e.style.animation='none');
-    }
+    // Simple enquiry handling: opens WhatsApp with a pre-filled message.
+    // The customer must press Send in WhatsApp. This static website does not store enquiries.
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      if (!this.reportValidity()) return;
+      const data = new FormData(this);
+      const message = [
+        'NEW WEBSITE ENQUIRY - NEXT LEVEL ENTERPRISES',
+        '',
+        'Name: ' + data.get('name'),
+        'Phone: ' + data.get('phone'),
+        'Email: ' + (data.get('email') || 'Not provided'),
+        'Service: ' + data.get('service'),
+        '',
+        'Request: ' + data.get('message')
+      ].join('\n');
+      const whatsappUrl = 'https://wa.me/254729138046?text=' + encodeURIComponent(message);
+      document.getElementById('formStatus').textContent = 'Your WhatsApp message is ready. Review it and press Send to submit your enquiry.';
+      window.open(whatsappUrl, '_blank', 'noopener');
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
-
-
-</body></html>
+</body>
+</html>
